@@ -1,0 +1,7 @@
+- debug:
+    msg: "get {{ repo_name }}"
+
+- name: Git checkout
+  ansible.builtin.git:
+    repo: "{{ this_git_repo }}"
+    dest: "{{ repo_dir }}"
