@@ -1,5 +1,10 @@
 - debug:
-    msg: "get {{ repo_name }}"
+    msg: "cloning {{ repo_name }}"
+
+- name: Create a directory
+  ansible.builtin.file:
+    path: "{{ src_dir }}"
+    state: directory
 
 - name: Git checkout
   ansible.builtin.git:
